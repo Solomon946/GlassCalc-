@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon_io (3)/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Background orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="calculator">
+        <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+            <span id="themeIcon">🌙</span>
+        </button>
+
+        <div class="display" role="region" aria-live="polite">
+            <div class="expression" id="expression"></div>
+            <div class="result" id="result">0</div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn clear" aria-label="Clear" onclick="clearDisplay()">C</button>
+            <button class="btn" aria-label="Open parenthesis" onclick="appendToDisplay('(')">(</button>
+            <button class="btn" aria-label="Close parenthesis" onclick="appendToDisplay(')')">)</button>
+            <button class="btn operator" aria-label="Divide" onclick="appendToDisplay('÷')">÷</button>
+
+            <button class="btn" aria-label="7" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" aria-label="8" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" aria-label="9" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator" aria-label="Multiply" onclick="appendToDisplay('×')">×</button>
+
+            <button class="btn" aria-label="4" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" aria-label="5" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" aria-label="6" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator" aria-label="Subtract" onclick="appendToDisplay('-')">-</button>
+
+            <button class="btn" aria-label="1" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" aria-label="2" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" aria-label="3" onclick="appendToDisplay('3')">3</button>
+            <button class="btn operator" aria-label="Add" onclick="appendToDisplay('+')">+</button>
+
+            <button class="btn" aria-label="Toggle sign" onclick="toggleSign()">±</button>
+            <button class="btn" aria-label="0" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" aria-label="Decimal" onclick="appendToDisplay('.')">.</button>
+            <button class="btn" aria-label="Percent" onclick="percentage()">%</button>
+
+            <button class="btn" aria-label="Backspace" onclick="backspace()">⌫</button>
+            <button class="btn equals" aria-label="Equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
